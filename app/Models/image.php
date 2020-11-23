@@ -15,20 +15,20 @@ class image extends Model
 
     public function comments()
     {
-        return $this->hasMany('App\comment');
+        return $this->hasMany('App\Models\comment');
     }
 
     // Relacion One To Many
 
     public function likes()
     {
-        return $this->hasMany('App\like');
+        return $this->hasMany('App\Models\like');
     }
 
     // Relacion Many To One / de muchos a uno
 
     public function user()
     {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo('App\Models\User', 'user_id');
     }
 }
